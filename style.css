@@ -1,0 +1,149 @@
+ * {margin:0;padding:0;box-sizing:border-box;font-family:monospace;}
+
+    body {
+      background: radial-gradient(circle at top, #0f172a, #020617);
+      color: #e2e8f0;
+      overflow-x:hidden;
+      font-size:20px;
+      text-shadow:1px 2px green;
+    }
+
+    /* Neon glow */
+    .neon {
+      color:#22c55e;
+      text-shadow:0 0 5px #22c55e,0 0 10px #22c55e,0 0 20px #22c55e;
+    }
+
+    header {
+      padding:20px;
+      text-align:center;
+      border-bottom:1px solid rgba(255,255,255,0.1);
+    }
+
+    nav a {
+      margin:0 15px;
+      color:#38bdf8;
+      text-decoration:none;
+      transition:0.3s;
+    }
+
+    nav a:hover {
+      color:#22c55e;
+      text-shadow:0 0 10px #22c55e;
+    }
+
+    section {
+      padding:60px 20px;
+      max-width:1000px;
+      margin:auto;
+    }
+
+    h1, h2 {
+      margin-bottom:20px;
+    }
+ /* GLITCH */
+    .glitch {
+      position:relative;
+      color:white;
+      font-size:32px;
+    }
+
+    .glitch::before,
+    .glitch::after {
+      content:attr(data-text);
+      position:absolute;
+      left:0;
+      width:100%;
+      overflow:hidden;
+    }
+
+    .glitch::before {
+      animation:glitchTop 1s infinite;
+      color:#22c55e;
+      clip-path:polygon(0 0,100% 0,100% 45%,0 45%);
+    }
+
+    .glitch::after {
+      animation:glitchBottom 1.5s infinite;
+      color:#f88e38;
+      clip-path:polygon(0 60%,100% 60%,100% 100%,0 100%);
+    }
+
+    @keyframes glitchTop {
+      0% {transform:translate(0);} 
+      50% {transform:translate(-2px,-2px);} 
+      100% {transform:translate(0);} 
+    }
+
+    @keyframes glitchBottom {
+      0% {transform:translate(0);} 
+      50% {transform:translate(2px,2px);} 
+      100% {transform:translate(0);} 
+    } /* glitch */
+
+    .card {
+      background: rgba(15,23,42,0.7);
+      border:1px solid rgba(255,255,255,0.1);
+      padding:20px;
+      margin:20px 0;
+      border-radius:12px;
+      backdrop-filter: blur(10px);
+      transition:0.3s;
+    }
+    
+  ol.card li {
+    margin-left:17px;
+  }
+    .card:hover {
+      transform:translateY(-5px) scale(1.01);
+      box-shadow:0 0 20px rgba(34,197,94,0.3);
+    }
+
+    /* Matrix rain */
+    canvas {
+      position:fixed;
+      top:0;
+      left:0;
+      z-index:-1;
+    }
+
+    .btn {
+      display:inline-block;
+      padding:12px 25px;
+      border:1px solid #22c55e;
+      color:#22c55e;
+      text-decoration:none;
+      border-radius:8px;
+      transition:0.3s;
+    }
+
+    .btn:hover {
+      background:#22c55e;
+      color:#020617;
+      box-shadow:0 0 20px #22c55e;
+    }
+
+    footer {
+      text-align:center;
+      padding:20px;
+      border-top:1px solid rgba(255,255,255,0.1);
+      margin-top:40px;
+      font-size:14px;
+    }
+    .card.show {
+    opacity: 1;
+    transform: translateY(0);
+    }
+   #menu > a:nth-child(7){
+    text-decoration: none;
+    color:green;
+    transition: all ease-out 1s;
+   }
+   #menu > a:nth-child(7):hover{
+    color:rgb(255, 217, 80);
+   }
+   footer > p > a {
+    color: #e2e8f0;
+    text-shadow: 1px 2px green;
+    text-decoration: none;
+   }
