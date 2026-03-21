@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amuletes</title>
+    <style>
+        /* Grid layout */
+#amulets {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+}
+
+/* Card улучшение */
+.card {
+  position: relative;
+  overflow: hidden;
+}
+
+/* Glow при наведении */
+.card::before {
+  content: \"\";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(120deg, transparent, rgba(34,197,94,0.3), transparent);
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.card:hover::before {
+  opacity: 1;
+}
+
+/* Магический текст */
+.magic {
+  margin-top: 10px;
+  color: #4ade80;
+  font-style: italic;
+  opacity: 0.9;
+}
+
+/* Анимация появления */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px) scale(0.98);
+  transition: 0.6s ease;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+    </style>
+</head>
+<body>
+    <main>
+
+            <section id="amulets">
+
+  <div class="card reveal">
+    <h2>🛡️ Оберег защиты</h2>
+    <p><strong>Применение:</strong> защита от взломов, фильтрация трафика</p>
+    <p><strong>Значение:</strong> граница между системой и внешним миром</p>
+    <p class="magic">🔮 отражает атаки и скрывает уязвимости</p>
+  </div>
+
+  <div class="card reveal">
+    <h2>⚖️ Оберег баланса</h2>
+    <p><strong>Применение:</strong> распределение нагрузки</p>
+    <p><strong>Значение:</strong> система не падает при нагрузке</p>
+    <p class="magic">🔮 равномерно распределяет ресурсы</p>
+  </div>
+
+  <div class="card reveal">
+    <h2>🔁 Оберег восстановления</h2>
+    <p><strong>Применение:</strong> бэкапы и восстановление</p>
+    <p><strong>Значение:</strong> возврат к рабочему состоянию</p>
+    <p class="magic">🔮 «отматывает время» системы</p>
+  </div>
+
+  <div class="card reveal">
+    <h2>🧠 Оберег оптимизации</h2>
+    <p><strong>Применение:</strong> ускорение работы</p>
+    <p><strong>Значение:</strong> максимум производительности</p>
+    <p class="magic">🔮 уменьшает лаги и ускоряет систему</p>
+  </div>
+
+  <div class="card reveal">
+    <h2>🔍 Оберег наблюдения</h2>
+    <p><strong>Применение:</strong> мониторинг и логи</p>
+    <p><strong>Значение:</strong> полный контроль системы</p>
+    <p class="magic">🔮 предупреждает о проблемах заранее</p>
+  </div>
+
+  <div class="card reveal">
+    <h2>🧪 Оберег автоматизации</h2>
+    <p><strong>Применение:</strong> cron, скрипты</p>
+    <p><strong>Значение:</strong> минимум ручной работы</p>
+    <p class="magic">🔮 выполняет задачи без участия человека</p>
+  </div>
+
+</section>
+
+    </main>
+</body>
+<script>
+const elements = document.querySelectorAll('.reveal');
+
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('active');
+    }
+  });
+});
+
+elements.forEach(el => observer.observe(el));
+</script>
+</html>
