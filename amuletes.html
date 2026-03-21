@@ -7,6 +7,17 @@
     <link rel="shortcut icon" href="logo.png" type="image/x-icon">
     <meta name="description" content="Амулеты для защиты кАмпуктера от коммунистических сил">
     <style>
+         /* Matrix rain */
+    canvas {
+      position:fixed;
+      top:0;
+      left:0;
+      z-index:-1;
+    }
+    body{
+        color:white;
+        text-shadow: 1px 1px green;
+    }
         .hero {
   text-align:center;
   padding:80px 20px;
@@ -100,6 +111,7 @@
     </style>
 </head>
 <body>
+    <canvas id="matrix"></canvas>
     <main>
 <section class="hero">
 
@@ -235,6 +247,8 @@
         <p><span id="data"></span> &copy; amuletes</p>
     </footer>
 </body>
+<script src="js/matrix.js"></script>
+
 <script>
 const elements = document.querySelectorAll('.reveal');
 
