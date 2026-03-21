@@ -39,7 +39,21 @@
 .hero-actions {
   margin-top:30px;
 }
+.btn {
+  display:inline-block;
+  padding:14px 28px;
+  border-radius:10px;
+  background: linear-gradient(90deg,#22c55e,#4ade80);
+  color:#020617;
+  text-decoration:none;
+  font-weight:bold;
+  transition:0.3s;
+}
 
+.btn:hover {
+  transform:scale(1.05);
+  box-shadow:0 0 20px #22c55e;
+}
 .btn.ghost {
   background:transparent;
   border:1px solid #38bdf8;
@@ -51,6 +65,41 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 20px;
+}
+
+.glitch {
+  position:relative;
+  font-size:32px;
+}
+
+.glitch::before,
+.glitch::after {
+  content:attr(data-text);
+  position:absolute;
+  left:0;
+  width:100%;
+}
+
+.glitch::before {
+  color:#22c55e;
+  animation:glitchTop 1s infinite;
+}
+
+.glitch::after {
+  color:#38bdf8;
+  animation:glitchBottom 1.5s infinite;
+}
+
+@keyframes glitchTop {
+  0%{transform:translate(0);}
+  50%{transform:translate(-2px,-2px);}
+  100%{transform:translate(0);}
+}
+
+@keyframes glitchBottom {
+  0%{transform:translate(0);}
+  50%{transform:translate(2px,2px);}
+  100%{transform:translate(0);}
 }
 
 /* Card улучшение */
@@ -105,6 +154,15 @@
 .cta {
   margin-top:60px;
 }
+.pulse {
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0% { box-shadow: 0 0 0 0 rgba(34,197,94,0.6); }
+  70% { box-shadow: 0 0 0 15px rgba(34,197,94,0); }
+  100% { box-shadow: 0 0 0 0 rgba(34,197,94,0); }
+}
     footer{
         text-align: center;
     }
@@ -113,7 +171,7 @@
 <body>
     <canvas id="matrix"></canvas>
     <main>
-<section class="hero">
+<!-- <section class="hero">
 
   <h1 class="glitch" data-text="ТВОЙ СЕРВЕР ПОД УГРОЗОЙ">
     ТВОЙ СЕРВЕР ПОД УГРОЗОЙ
@@ -132,7 +190,7 @@
     <a href="#amulets" class="btn ghost">Смотреть решения</a>
   </div>
 
-</section>
+</section> -->
 <section class="hero">
 
   <h1 class="glitch" data-text="СЕРВЕР ПАДАЕТ = ТЫ ТЕРЯЕШЬ ДЕНЬГИ">
@@ -154,7 +212,21 @@
   </a>
 
 </section>
+<div class="card reveal">
 
+  <h2>⚠️ Если ничего не делать</h2>
+
+  <ul>
+    <li>❌ сайт упадёт в самый неудобный момент</li>
+    <li>❌ возможна потеря данных</li>
+    <li>❌ риск взлома</li>
+  </ul>
+
+  <p class="magic">
+    🔴 Это не “если”, а “когда”.
+  </p>
+
+</div>
 <section class="trust">
 
   <div class="card reveal">
