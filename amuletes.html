@@ -5,6 +5,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Amuletes</title>
     <style>
+        .hero {
+  text-align:center;
+  padding:80px 20px;
+  max-width:800px;
+  margin:auto;
+}
+
+.hero-sub {
+  margin-top:15px;
+  opacity:0.8;
+  font-size:18px;
+}
+
+.hero-sub.strong {
+  color:#4ade80;
+  font-weight:600;
+}
+
+.hero-actions {
+  margin-top:30px;
+}
+
+.btn.ghost {
+  background:transparent;
+  border:1px solid #38bdf8;
+  color:#38bdf8;
+  margin-left:10px;
+}
         /* Grid layout */
 #amulets {
   display: grid;
@@ -51,11 +79,58 @@
   opacity: 1;
   transform: translateY(0) scale(1);
 }
+.center {
+  text-align:center;
+}
+
+.cta .big {
+  margin-top:20px;
+  font-size:18px;
+  padding:16px 35px;
+}
+
+.cta {
+  margin-top:60px;
+}
     </style>
 </head>
 <body>
     <main>
+<section class="hero">
 
+  <h1 class="glitch" data-text="ТВОЙ СЕРВЕР ПОД УГРОЗОЙ">
+    ТВОЙ СЕРВЕР ПОД УГРОЗОЙ
+  </h1>
+
+  <p class="hero-sub">
+    Если сайт тормозит, падает или может быть взломан — ты уже теряешь деньги.
+  </p>
+
+  <p class="hero-sub strong">
+    Я настраиваю защиту, стабильность и ускорение серверов на Debian + NGINX.
+  </p>
+
+  <div class="hero-actions">
+    <a href="#contact" class="btn">🚀 Получить диагностику</a>
+    <a href="#amulets" class="btn ghost">Смотреть решения</a>
+  </div>
+
+</section>
+<section class="trust">
+
+  <div class="card reveal">
+    <h2>💡 Почему это работает</h2>
+
+    <ul>
+      <li>⚡ Быстро нахожу проблемы (опыт Linux / NGINX)</li>
+      <li>🛡️ Делаю не “красиво”, а чтобы НЕ ПАДАЛО</li>
+      <li>🔧 Настройка под твою задачу, без мусора</li>
+      <li>📈 Ускорение без покупки нового железа</li>
+    </ul>
+
+  </div>
+
+</section>
             <section id="amulets">
 
   <div class="card reveal">
@@ -102,6 +177,32 @@
 
 </section>
 
+
+<section id="contact" class="cta">
+
+  <div class="card reveal center">
+
+    <h2>🚀 Получить диагностику сервера</h2>
+
+    <p>
+      Напиши — посмотрю твой сервер и скажу:
+    </p>
+
+    <ul>
+      <li>что не так</li>
+      <li>где слабые места</li>
+      <li>как это исправить</li>
+    </ul>
+
+    <p class="strong">👉 Без воды. По делу.</p>
+
+    <a href="mailto:your@email.com" class="btn big">
+      Написать сейчас
+    </a>
+
+  </div>
+
+</section>
     </main>
 </body>
 <script>
