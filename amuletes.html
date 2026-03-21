@@ -86,7 +86,7 @@
 }
 
 .glitch::after {
-  color:#ebf838;
+  color:#f85838;
   animation:glitchBottom 1.5s infinite;
   top:1px;
 }
@@ -317,7 +317,7 @@
 </section>
     </main>
     <footer>
-        <p><span id="data"></span> &copy; amuletes</p>
+        <p><span id="date"></span> &copy; amuletes</p>
     </footer>
 </body>
 <script src="js/matrix.js"></script>
@@ -334,5 +334,8 @@ const observer = new IntersectionObserver(entries => {
 });
 
 elements.forEach(el => observer.observe(el));
+
+//data
+document.getElementById("date").textContent=new Date().getFullYear();
 </script>
 </html>
