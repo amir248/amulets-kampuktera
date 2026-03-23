@@ -149,11 +149,11 @@ footer{text-align:center; padding:20px; border-top:1px solid rgba(255,255,255,0.
     async function loadAssets() {
       try {
       // Загружаем CSS
-      const cssResponse = await fetch("https://comments.qucu.ru/style");
-      const cssText = await cssResponse.text();
-      const style = document.createElement("style");
-      style.textContent = cssText;
-      document.head.append(style);
+      // const cssResponse = await fetch("https://comments.qucu.ru/style");
+      // const cssText = await cssResponse.text();
+      // const style = document.createElement("style");
+      // style.textContent = cssText;
+      // document.head.append(style);
 
       // Загружаем JS с ID пользователя
       const jsResponse = await fetch(`https://comments.qucu.ru/no-captcha/2`);
