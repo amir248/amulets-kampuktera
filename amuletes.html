@@ -482,6 +482,65 @@
   </div>
 
 </section>
+<style>
+  #comment-style{
+    width:100%;
+    max-width:880px;
+  }
+  #comments-list{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+    flex-direction:column;
+    /* margin:17px; */
+  }
+  .comment{
+    width:calc(100% - 2px);
+    max-width:842px;
+    background: rgba(15,23,42,0.7);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 17px;
+    margin-bottom:7px;
+  }
+  .comment > p{
+    padding:17px;
+
+  }
+  .comment > span{
+    background: green;
+    border-radius: 0 0 0 17px;
+  }
+</style>
+<section id="comments-style">
+  <div id="comments" class="card reveal"></div>
+  <script>
+    async function loadAssets() {
+      try {
+      // Загружаем CSS
+      // const cssResponse = await fetch("https://comments.qucu.ru/style");
+      // const cssText = await cssResponse.text();
+      // const style = document.createElement("style");
+      // style.textContent = cssText;
+      // document.head.append(style);
+
+      // Загружаем JS с ID пользователя
+      const jsResponse = await fetch(`https://comments.qucu.ru/no-captcha/2`);
+      const jsText = await jsResponse.text();
+      const js = document.createElement("script");
+      js.type = "text/javascript";
+      js.textContent = jsText;
+      document.head.append(js);
+
+
+      } catch (err) {
+      console.error("Ошибка загрузки:", err);
+      }
+      }
+
+      loadAssets();
+  </script>
+</section>
     </main>
     <footer>
         <p><span id="date"></span> &copy; amuletes</p>
