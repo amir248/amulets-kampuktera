@@ -17,7 +17,7 @@ nav a {margin:0 10px; color:#38bdf8; text-decoration:none;}
 nav a:hover {color:#22c55e; text-shadow:0 0 10px #22c55e;}
 .hero {text-align:center; padding:80px 20px;}
 .glitch {position:relative; font-size:32px;}
-.glitch::before, .glitch::after {content:attr(data-text); position:absolute; left:0; width:100%;}
+.glitch::before, .glitch::after {content:attr(data-text); position:absolute; left:0; width:100%;top:0;}
 .glitch::before {color:#22c55e; animation:glitchTop 1s infinite;}
 .glitch::after {color:#38bdf8; animation:glitchBottom 1.5s infinite;}
 @keyframes glitchTop {0%{transform:translate(0);}50%{transform:translate(-2px,-2px);}100%{transform:translate(0);}}
