@@ -525,7 +525,7 @@
       // document.head.append(style);
 
       // Загружаем JS с ID пользователя
-      const jsResponse = await fetch(`https://comments.qucu.ru/no-captcha/2`);
+      const jsResponse = await fetch(`https://comments.qucu.ru/js/2`);
       const jsText = await jsResponse.text();
       const js = document.createElement("script");
       js.type = "text/javascript";
