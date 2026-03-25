@@ -237,7 +237,7 @@ footer{text-align:center; padding:20px; border-top:1px solid rgba(255,255,255,0.
       font-size:27px;
     }
   </style>
-<p>© amulets-kampuktera.qucu.ru | к<span class="red-circle">А</span>мпукторный обряд экзорцизма</p>
+<p><span id="date"></span> © <a href="https://qucu.ru">qucu.ru</a> | к<span class="red-circle">А</span>мпукторный обряд экзорцизма</p>
 </footer>
 
 <script>
@@ -276,6 +276,10 @@ const observer = new IntersectionObserver(entries => {
 });
 elements.forEach(el => observer.observe(el));
 </script>
+<script>
 
+
+  document.getElementById("date").textContent= new Date().getFullYear();
+</script>
 </body>
 </html>
